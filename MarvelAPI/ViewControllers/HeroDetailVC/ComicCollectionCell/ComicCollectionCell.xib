@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comic Book.otf">
+            <string>ComicBook</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ComicCollectionCell" customModule="MarvelAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="348"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="348"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5s-yv-yXR">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="348"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YwX-EN-IRg">
+                                <rect key="frame" x="1" y="1" width="348" height="346"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGb-q9-lds">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="264"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4s-UQ-rBj">
+                                                <rect key="frame" x="2" y="2" width="344" height="260"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="H4s-UQ-rBj" secondAttribute="bottom" constant="2" id="6zz-b8-kUm"/>
+                                            <constraint firstAttribute="trailing" secondItem="H4s-UQ-rBj" secondAttribute="trailing" constant="2" id="cJQ-Lq-C5G"/>
+                                            <constraint firstItem="H4s-UQ-rBj" firstAttribute="leading" secondItem="IGb-q9-lds" secondAttribute="leading" constant="2" id="eGC-sk-CPL"/>
+                                            <constraint firstItem="H4s-UQ-rBj" firstAttribute="top" secondItem="IGb-q9-lds" secondAttribute="top" constant="2" id="p5i-HI-7DY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-2U-hST">
+                                        <rect key="frame" x="0.0" y="265" width="348" height="81"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fac-5J-H5h">
+                                                <rect key="frame" x="8" y="8" width="332" height="65"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="Ldx-Sy-LFd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ComicBook" family="Comic Book" pointSize="15"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="fac-5J-H5h" firstAttribute="top" secondItem="vGZ-2U-hST" secondAttribute="top" constant="8" id="1wu-Pn-qAE"/>
+                                            <constraint firstItem="fac-5J-H5h" firstAttribute="leading" secondItem="vGZ-2U-hST" secondAttribute="leading" constant="8" id="Bcx-ym-i6V"/>
+                                            <constraint firstAttribute="trailing" secondItem="fac-5J-H5h" secondAttribute="trailing" constant="8" id="Gzv-bm-h09"/>
+                                            <constraint firstAttribute="bottom" secondItem="fac-5J-H5h" secondAttribute="bottom" constant="8" id="kcw-Pd-HPt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YwX-EN-IRg" secondAttribute="trailing" constant="1" id="0xV-TJ-Fpx"/>
+                            <constraint firstItem="YwX-EN-IRg" firstAttribute="top" secondItem="u5s-yv-yXR" secondAttribute="top" constant="1" id="2xK-sB-UrW"/>
+                            <constraint firstItem="YwX-EN-IRg" firstAttribute="leading" secondItem="u5s-yv-yXR" secondAttribute="leading" constant="1" id="TMh-GI-rOn"/>
+                            <constraint firstAttribute="bottom" secondItem="YwX-EN-IRg" secondAttribute="bottom" constant="1" id="wbg-8A-ezm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="u5s-yv-yXR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Qa-bi-46i"/>
+                <constraint firstItem="u5s-yv-yXR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LOB-qR-nmH"/>
+                <constraint firstAttribute="bottom" secondItem="u5s-yv-yXR" secondAttribute="bottom" id="MWZ-Nk-qfO"/>
+                <constraint firstAttribute="trailing" secondItem="u5s-yv-yXR" secondAttribute="trailing" id="gUT-fG-R4q"/>
+            </constraints>
+            <size key="customSize" width="350" height="348"/>
+            <connections>
+                <outlet property="comicsImageView" destination="H4s-UQ-rBj" id="vsK-Am-1eR"/>
+                <outlet property="comicsNameLabel" destination="fac-5J-H5h" id="t1R-mW-J39"/>
+                <outlet property="containerView" destination="u5s-yv-yXR" id="wge-9u-PSV"/>
+            </connections>
+            <point key="canvasLocation" x="117.39130434782609" y="125.22321428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
