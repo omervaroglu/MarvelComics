@@ -41,6 +41,7 @@
 		457906722484E0120070AF4C /* Comic Book Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4579066D2484E0120070AF4C /* Comic Book Italic.otf */; };
 		4582903424859BE300DBC86E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582903324859BE300DBC86E /* Date.swift */; };
 		458290362485A44600DBC86E /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458290352485A44600DBC86E /* Defaults.swift */; };
+		458290392485B92200DBC86E /* FavoriteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 458290372485B92200DBC86E /* FavoriteModel.xcdatamodeld */; };
 		9EE276781E095D93159960BD /* libPods-MarvelAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6DDC28E4E6C3964B61EFDE /* libPods-MarvelAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		4579066D2484E0120070AF4C /* Comic Book Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comic Book Italic.otf"; sourceTree = "<group>"; };
 		4582903324859BE300DBC86E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		458290352485A44600DBC86E /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		458290382485B92200DBC86E /* FavoriteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteModel.xcdatamodel; sourceTree = "<group>"; };
 		9B63217ED71A1BBF30A3E08C /* Pods-MarvelAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPI.release.xcconfig"; path = "Target Support Files/Pods-MarvelAPI/Pods-MarvelAPI.release.xcconfig"; sourceTree = "<group>"; };
 		EC6DDC28E4E6C3964B61EFDE /* libPods-MarvelAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarvelAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 				457906432484224A0070AF4C /* ViewControllers */,
 				4515D8882485068A00048A11 /* View */,
 				4579063D24841DFA0070AF4C /* Info.plist */,
+				458290372485B92200DBC86E /* FavoriteModel.xcdatamodeld */,
 			);
 			path = MarvelAPI;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				45790662248476470070AF4C /* HeroDetailVC.swift in Sources */,
 				45790658248441050070AF4C /* HeroTableViewCell.swift in Sources */,
 				4579065424843CB60070AF4C /* Hero.swift in Sources */,
+				458290392485B92200DBC86E /* FavoriteModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		458290372485B92200DBC86E /* FavoriteModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				458290382485B92200DBC86E /* FavoriteModel.xcdatamodel */,
+			);
+			currentVersion = 458290382485B92200DBC86E /* FavoriteModel.xcdatamodel */;
+			path = FavoriteModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4579062424841DF80070AF4C /* Project object */;
 }

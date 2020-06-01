@@ -27,6 +27,7 @@ struct Hero: Codable {
     let thumbnail: Thumbnail?
     let resourceURI: String?
     let urls: [URLElement]?
+    var savedImagePath : String?
     
     enum CodingKeys: String, CodingKey {
         case id, name

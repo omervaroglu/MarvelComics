@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class HeroDetailVC : UIViewController {
     
@@ -25,11 +26,13 @@ class HeroDetailVC : UIViewController {
             tableView.reloadData()
         }
     }
+    var savedHero : [Hero] = []
     
     var headerCellNibName  = "HeaderCell"
     var ComicsCellNibName = "ComicsCell"
     
     override func viewDidLoad() {
+        getData()
         registerCell()
         setUI()
         getComics()
@@ -118,6 +121,62 @@ extension HeroDetailVC : UITableViewDelegate, UITableViewDataSource {
         } else {
             return 420.0
         }
+    }
+
+}
+extension HeroDetailVC {
+    fileprivate func getData() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavItem")
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    
+                    guard let title = result.value(forKey: "title") as? String else {
+                        return
+                    }
+                    
+                    guard let imagePath = result.value(forKey: "imagePath") as? String else {
+                        return
+                    }
+                    
+                    guard let id = result.value(forKey: "id") as? Int else {
+                        return
+                    }
+                    let hero = Hero(id: id, name: title, resultDescription: nil, modified: nil, thumbnail: nil, resourceURI: nil, urls: nil, savedImagePath: imagePath)
+                    self.savedHero.append(hero)
+                }
+            }
+        } catch {
+            
+        }
+    }
+
+    fileprivate func saveData() {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let favItem = NSEntityDescription.insertNewObject(forEntityName: "FavItem", into: context)
+        let imagePath: String = (hero?.thumbnail?.path ?? "") + "." + (hero?.thumbnail?.thumbnailExtension ?? "")
+        
+        favItem.setValue(hero?.name, forKey: "title")
+        favItem.setValue(imagePath, forKey: "imagePath")
+        favItem.setValue(hero?.id , forKey: "id")
+        
+        do {
+            try context.save()
+            print("Basarili")
+        } catch {
+            print(error)
+        }
+        
     }
 
 }

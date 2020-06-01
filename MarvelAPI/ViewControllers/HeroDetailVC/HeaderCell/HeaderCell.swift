@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HeaderCell: UITableViewCell {
 
@@ -27,6 +28,7 @@ class HeaderCell: UITableViewCell {
     var hero: Hero?
     
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -44,13 +46,9 @@ class HeaderCell: UITableViewCell {
         !isFaved ? (isFaved = true) : (isFaved = false)
         
         if isFaved {
-            UserDefaults.standard.set(object: hero, forKey: "favHero")
         } else {
             UserDefaults.standard.removeObject(forKey: "favHero")
         }
-        
-        
-
     }
 }
 
