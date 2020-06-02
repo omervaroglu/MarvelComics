@@ -26,5 +26,11 @@ class HeroTableViewCell: UITableViewCell {
         setImg(image: heroImageView, imgLink: imagePath)
         heroNameLabel.text = hero.name
     }
+    
+    public func configureForFav(hero: Hero) {
+        heroImageView.dropShadowView()
+        setImg(image: heroImageView, imgLink: hero.savedImagePath ?? "")
+        heroNameLabel.text = hero.name
+    }
 
 }

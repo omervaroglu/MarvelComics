@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroListVC" customModule="MarvelAPI" customModuleProvider="target">
             <connections>
+                <outlet property="customNavBar" destination="rq8-T3-03O" id="c4j-HT-ncf"/>
                 <outlet property="tableView" destination="joB-aU-tx9" id="WlT-Cv-Zce"/>
                 <outlet property="view" destination="7Lp-mS-LD8" id="kZU-Xl-hdt"/>
             </connections>

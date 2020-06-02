@@ -15,8 +15,10 @@ class CustomNavBar : UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var rightItemImageView: UIImageView!
     
     var backButtonClicked: (() -> ())?
+    var rightButtonClicked: (() -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,9 +40,13 @@ class CustomNavBar : UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backImageView.isHidden = true
+        self.rightItemImageView.isHidden = true
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.backButtonClicked?()
+    }
+    @IBAction func rightButtonAction(_ sender: Any) {
+        self.rightButtonClicked?()
     }
 }

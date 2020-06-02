@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+protocol setFavDelegate: class {
+    func setFav(isFaved: Bool)
+}
 
 class HeaderCell: UITableViewCell {
 
@@ -14,6 +19,8 @@ class HeaderCell: UITableViewCell {
     @IBOutlet weak var heroNameLabel: UILabel!
     @IBOutlet weak var heroDescriptionLabel: UILabel!
     @IBOutlet weak var favImageView: UIImageView!
+    
+    weak var delegate: setFavDelegate?
     
     var isFaved: Bool = false{
         didSet{
@@ -25,7 +32,6 @@ class HeaderCell: UITableViewCell {
         }
     }
     var hero: Hero?
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,15 +48,7 @@ class HeaderCell: UITableViewCell {
 
     @IBAction func favButtonAction(_ sender: Any) {
         !isFaved ? (isFaved = true) : (isFaved = false)
-        
-        if isFaved {
-            UserDefaults.standard.set(object: hero, forKey: "favHero")
-        } else {
-            UserDefaults.standard.removeObject(forKey: "favHero")
-        }
-        
-        
-
+        self.delegate?.setFav(isFaved: isFaved)
     }
 }
 
