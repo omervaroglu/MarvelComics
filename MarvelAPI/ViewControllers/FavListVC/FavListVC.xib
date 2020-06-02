@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavListVC" customModule="MarvelAPI" customModuleProvider="target">
+            <connections>
+                <outlet property="customNavBar" destination="bxp-zZ-j9U" id="Yk1-Yk-CHW"/>
+                <outlet property="tableView" destination="9FU-Wm-bVS" id="Tcy-sP-nwq"/>
+                <outlet property="view" destination="ma0-KL-ZrS" id="VDJ-8d-BEV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ma0-KL-ZrS">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9FU-Wm-bVS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgp-ge-eGB">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxp-zZ-j9U" customClass="CustomNavBar" customModule="MarvelAPI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bxp-zZ-j9U" secondAttribute="trailing" id="Ix6-P3-yPa"/>
+                        <constraint firstAttribute="bottom" secondItem="bxp-zZ-j9U" secondAttribute="bottom" constant="1" id="fyq-GE-cWY"/>
+                        <constraint firstItem="bxp-zZ-j9U" firstAttribute="top" secondItem="mgp-ge-eGB" secondAttribute="top" id="mK0-B3-jgA"/>
+                        <constraint firstAttribute="height" constant="60" id="peF-1s-xvd"/>
+                        <constraint firstItem="bxp-zZ-j9U" firstAttribute="leading" secondItem="mgp-ge-eGB" secondAttribute="leading" id="wg6-no-27a"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9FU-Wm-bVS" secondAttribute="bottom" id="5If-Fz-rT9"/>
+                <constraint firstItem="mgp-ge-eGB" firstAttribute="leading" secondItem="Gkh-Dr-ga8" secondAttribute="leading" id="Gv2-pm-l83"/>
+                <constraint firstItem="9FU-Wm-bVS" firstAttribute="top" secondItem="Gkh-Dr-ga8" secondAttribute="top" id="Nab-E1-doq"/>
+                <constraint firstItem="9FU-Wm-bVS" firstAttribute="leading" secondItem="Gkh-Dr-ga8" secondAttribute="leading" id="OHK-Cq-EkW"/>
+                <constraint firstItem="mgp-ge-eGB" firstAttribute="trailing" secondItem="Gkh-Dr-ga8" secondAttribute="trailing" id="Wjg-Qq-ZjX"/>
+                <constraint firstItem="mgp-ge-eGB" firstAttribute="top" secondItem="Gkh-Dr-ga8" secondAttribute="top" id="f2E-J4-jij"/>
+                <constraint firstItem="9FU-Wm-bVS" firstAttribute="trailing" secondItem="Gkh-Dr-ga8" secondAttribute="trailing" id="liy-1e-Ge1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Gkh-Dr-ga8"/>
+            <point key="canvasLocation" x="-62.318840579710148" y="24.776785714285712"/>
+        </view>
+    </objects>
+</document>

@@ -42,6 +42,8 @@
 		4582903424859BE300DBC86E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582903324859BE300DBC86E /* Date.swift */; };
 		458290362485A44600DBC86E /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458290352485A44600DBC86E /* Defaults.swift */; };
 		458290392485B92200DBC86E /* FavoriteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 458290372485B92200DBC86E /* FavoriteModel.xcdatamodeld */; };
+		4582903C2485CCD900DBC86E /* FavListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4582903B2485CCD900DBC86E /* FavListVC.swift */; };
+		4582903E2485CD6100DBC86E /* FavListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4582903D2485CD6100DBC86E /* FavListVC.xib */; };
 		9EE276781E095D93159960BD /* libPods-MarvelAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6DDC28E4E6C3964B61EFDE /* libPods-MarvelAPI.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		4582903324859BE300DBC86E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		458290352485A44600DBC86E /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		458290382485B92200DBC86E /* FavoriteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteModel.xcdatamodel; sourceTree = "<group>"; };
+		4582903B2485CCD900DBC86E /* FavListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavListVC.swift; sourceTree = "<group>"; };
+		4582903D2485CD6100DBC86E /* FavListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavListVC.xib; sourceTree = "<group>"; };
 		9B63217ED71A1BBF30A3E08C /* Pods-MarvelAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPI.release.xcconfig"; path = "Target Support Files/Pods-MarvelAPI/Pods-MarvelAPI.release.xcconfig"; sourceTree = "<group>"; };
 		EC6DDC28E4E6C3964B61EFDE /* libPods-MarvelAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MarvelAPI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,6 +205,7 @@
 		457906432484224A0070AF4C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4582903A2485CCBA00DBC86E /* FavListVC */,
 				457906602484761D0070AF4C /* HeroDetailVC */,
 				4579064B24842A1F0070AF4C /* HeroListVC */,
 				45790646248422AB0070AF4C /* SplashVC */,
@@ -305,6 +310,15 @@
 			path = comic_book;
 			sourceTree = "<group>";
 		};
+		4582903A2485CCBA00DBC86E /* FavListVC */ = {
+			isa = PBXGroup;
+			children = (
+				4582903B2485CCD900DBC86E /* FavListVC.swift */,
+				4582903D2485CD6100DBC86E /* FavListVC.xib */,
+			);
+			path = FavListVC;
+			sourceTree = "<group>";
+		};
 		78AAF587ADC13C60A93A0E67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4582903E2485CD6100DBC86E /* FavListVC.xib in Resources */,
 				457906722484E0120070AF4C /* Comic Book Italic.otf in Resources */,
 				45643CF524854557001C9B39 /* ComicsCell.xib in Resources */,
 				4579066E2484E0120070AF4C /* Font License.txt in Resources */,
@@ -444,6 +459,7 @@
 				458290362485A44600DBC86E /* Defaults.swift in Sources */,
 				4579063024841DF80070AF4C /* AppDelegate.swift in Sources */,
 				4515D88B248506B800048A11 /* CustomNavBar.swift in Sources */,
+				4582903C2485CCD900DBC86E /* FavListVC.swift in Sources */,
 				4579064D24842A420070AF4C /* HeroListVC.swift in Sources */,
 				45643CFD24857914001C9B39 /* ComicCollectionCell.swift in Sources */,
 				45790648248422CE0070AF4C /* SplashVC.swift in Sources */,
